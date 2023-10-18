@@ -1,0 +1,865 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@100&display=swap');
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Nunito Sans', sans-serif;
+    background: #fff;
+    font-size: Arial, Helvetica, sans-serif;    
+}
+
+header{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 45px;
+    background: #000000;
+    color: #fff;
+    overflow: hidden;
+}
+
+.logo{
+   display: flex;
+    left: 150px;
+    top: 12px;
+    align-items: center;
+    
+}
+
+#logo{
+    height:4rem;
+    width: 4rem;
+}
+
+.Pesquisar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 11px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    height: 20px;
+}
+
+
+
+.logCad{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+.botao{
+    margin: 10px;
+    background: purple;
+    margin: none;
+    border-radius: 5px;
+    padding: 4px;
+    border: none;
+}
+
+.botao:hover{
+    background: rgb(150, 85, 150);
+    transform: scale(1.1);
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.lupa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    height: 20px;
+    width: 20px;
+    align-items: center;
+    border: none;
+    margin-top: 11px;
+    margin-left: -7px;
+    border-radius: 5px;
+}
+
+.caixaPesquisa{
+    display: flex;
+}
+
+.lupa:hover{
+    background: #bfbfbf;
+}
+
+.lupaImg{
+    display: flex;
+    align-items: center;
+    width: 17px;
+    height: 17px;
+    top: 2px;
+}
+
+.card-cadastrar{
+    background-color:#1c1c1cf6;
+    width: 450px;
+    height: 530px;
+    border-radius: 20px;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.h1-userCadastrando{
+    color: green;
+    border-radius: 10px;
+    font-size:12px;
+    text-align: center;
+    transform: translate(0%,30px);
+    display: none;
+}
+
+.validacao-campos{
+    color: red;
+    font-size:10px;
+    text-align: center;
+    transform: translate(0%,30px);
+    display: none;
+}
+
+.h1-login-cadastro{
+    color: white;
+    text-align: center;
+    transform: translate(0px,60px);
+    margin-bottom: 5px;
+}
+
+.cadastro-linha {
+    width: 165px;
+    height: 1px;
+    background:linear-gradient(136deg, rgba(255, 0, 198, 1) 0%, rgba(255, 255, 0, 1) 100%);     
+    transform: translate(142px,62px);
+    border-radius: 1px;
+}
+
+.cadastro-input{
+    position: relative;
+    padding-top: 0px;
+    margin-top: 5%;
+}
+
+.cadastro-input label{
+    color: white;
+    pointer-events: none;
+    position: absolute;
+    transform: translate(50px,20px);
+    margin-top: 13px;
+    transition: all .3s ease-out;
+}
+
+.cadastro-input input:focus + label,
+.cadastro-input input:valid + label{
+    font-size: 13px;
+    margin-top: 0;
+    color: white;
+}
+
+.input-cadastrar {
+    display: block;
+    background-color: transparent;
+    width: 340px;
+    height: 30px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom-color: #D7DDE8;
+    transform: translate(50px,70px);
+    outline:none;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.visualizar-senha{
+    position: absolute;
+    transform: translate(355px,32px);
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-cadastrar{
+    display: block;
+    position: absolute;
+    width: 340px;
+    height: 30px;
+    background-color: transparent;
+    color: white;
+    border-color: #D7DDE8;
+    margin-top: 20px ;
+    margin-bottom: 20px ;
+    border-radius: 4px;
+    transform: translate(50px,90px);
+    cursor: pointer;
+}
+
+.cadastro-linhaSeparadora{
+    width: 430px;
+    height: 1px;
+    background:linear-gradient(136deg, rgba(255, 0, 198, 1) 0%, rgba(255, 255, 0, 1) 100%);     
+    transform: translate(10px,170px);
+    border-radius: 1px;
+}
+
+.cadastro-h1-entrar{
+    color: white;
+    text-align: center;
+    transform: translate(0px,190px);
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.cadastro-btn-entrar{
+    display: block;
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    background:linear-gradient(136deg, rgba(255, 0, 198, 1) 0%, rgba(255, 255, 0, 1) 100%);     
+    color: white;
+    border-radius: 4px;
+    border: none;
+    transform: translate(160px,200px);
+    cursor: pointer;
+}
+
+/* section card-cadastrar acima */
+
+.card-login {
+    background-color:#1c1c1cf6;
+    width: 450px;
+    height: 470px;
+    border-radius: 20px;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-linha{
+    width: 85px;
+    height: 1px;
+    background:linear-gradient(136deg, rgba(255, 0, 198, 1) 0%, rgba(255, 255, 0, 1) 100%);     
+    transform: translate(183px,62px);
+    border-radius: 1px;
+}
+
+
+.input-login label{
+    color: white;
+    pointer-events: none;
+    position: absolute;
+    transform: translate(85px,70px);
+    margin-top: 13px;
+    transition: all .3s ease-out;
+}
+
+.input-login input:focus + label,
+.input-login input:valid + label{
+    font-size: 13px;
+    margin-top: 0;
+    color: white;
+}
+
+.login-input {
+    display: block;
+    background-color: transparent;
+    width: 340px;
+    height: 30px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom-color: #D7DDE8;
+    transform: translate(50px,130px);
+    outline:none;
+    color: white;
+    padding-left: 35px;
+    margin-bottom: 20px;
+}
+
+.campo-obrigatorio-login-input{
+    position: fixed;
+    color: red;
+    font-size:9px;
+    text-align: center;
+    transform: translate(18%,-110px);
+    display: none;
+}
+
+.visualizarSenhaLogin{
+    position: absolute;
+    transform: translate(365px,85px);
+    color: #fff;
+    cursor: pointer;
+}
+
+.spans {
+    position: fixed;
+    float: right;
+    color: rgba(0, 0, 255, 0.596);
+    transform: translate(35px,80px);
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.693);
+}
+
+.material-symbols-outlined.md-36 {
+    font-size: 21px;
+}
+
+.login-span-person {
+    transform: translate(20px,-50px);
+    color: #fff;
+}
+
+.login-span-lock{
+    transform: translate(-6px,3px);
+}
+
+.btn-login-enter{
+    display: block;
+    position: absolute;
+    width: 340px;
+    height: 30px;
+    background-color: transparent;
+    color: white;
+    border-color: #D7DDE8;
+    border-radius: 4px;
+    transform: translate(50px,150px);
+    cursor: pointer;
+}
+
+.campo-obrigatorio-login{
+    color: red;
+    font-size: 9px;
+    text-align: center;
+    transform: translate(0px, 122px);
+    display: none;
+}
+
+.login-linhaSeparadora{
+    width: 430px;
+    height: 1px;
+    background:linear-gradient(136deg, rgba(255, 0, 198, 1) 0%, rgba(255, 255, 0, 1) 100%);     
+    transform: translate(10px,210px);
+    border-radius: 1px;
+}
+
+.login-h1-cadastrar{
+    color: white;
+    text-align: center;
+    transform: translate(0px,220px);
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.login-btn-criar{
+    display: block;
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    background:linear-gradient(136deg, rgba(255, 0, 198, 1) 0%, rgba(255, 255, 0, 1) 100%);     
+    color: white;
+    border-radius: 4px;
+    border: none;
+    transform: translate(160px,230px);
+    cursor: pointer;
+}
+
+/* section card-login acima */
+
+.localizar-user{
+    background-color:#1c1c1cf6;
+    box-shadow: 0px 1px 10px 1px #000;
+    width: 470px;
+    height: 450px;
+    border-radius: 10px;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    animation-name: animimacao;
+    animation-duration: 1.2s;
+    animation-direction: normal;
+}
+
+.h1-localizarUser{
+    color: white;
+    text-align: center;
+    transform: translate(0px,120px);
+    margin-bottom: 5px;
+}
+
+.linha-localizarUser{
+    width: 200px;
+    height: 1px;
+    background:linear-gradient(136deg, rgba(255, 0, 198, 1) 0%, rgba(255, 255, 0, 1) 100%);     
+    transform: translate(135px,120px);
+    border-radius: 1px;
+}
+
+.input-pesquisarUsuarios {
+    position: relative;
+    padding-top: 0px;
+    margin-top: 5%;
+}
+
+.input-pesquisarUsuarios label{
+    color: white;
+    pointer-events: none;
+    position: absolute;
+    transform: translate(30px,105px);
+    margin-top: 13px;
+    transition: all .3s ease-out;
+}
+
+.input-pesquisarUsuarios input:focus + label,
+.input-pesquisarUsuarios input:valid + label{
+    font-size: 13px;
+    margin-top: 0;
+    color: white;
+}
+
+.input-pesquisarUser{
+    display: block;
+    background-color: transparent;
+    width: 390px;
+    height: 30px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom-color: #D7DDE8;
+    transform: translate(30px,155px);
+    outline:none;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.pesquisarUsuarioIcon{
+    position: absolute;
+    width: 340px;
+    height: 30px;
+    color: white;
+    transform: translate(390px,118px);
+    cursor: pointer;
+}
+
+.btn-pesquisaUser{
+    display: block;
+    position: absolute;
+    width: 340px;
+    height: 30px;
+    background-color: transparent;
+    color: white;
+    border-color: #D7DDE8;
+    margin-top: 20px ;
+    margin-bottom: 20px ;
+    border-radius: 4px;
+    transform: translate(60px,190px);
+    cursor: pointer;
+}
+
+.campo-obrigatorio{
+    color: red;
+    font-size: 9px;
+    text-align: center;
+    transform: translate(0px, 170px);
+    display: none;
+}
+
+/* section localizar-user acima */
+
+.card-inform{
+    background-color:#1c1c1cf6;
+    box-shadow: 0px 1px 10px 1px #000;
+    width: 370px;
+    height: 450px;
+    border-radius: 10px;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    animation-name: animimacao;
+    animation-duration: 1.2s;
+    animation-direction: normal;
+}
+
+@keyframes animimacao {
+    from {
+        transform: translate(-50%);
+      }
+}
+
+.overlay{
+    position: absolute;
+    height: 28%;
+    width: 100%;
+    background:linear-gradient(136deg, rgba(255, 0, 198, 1) 0%, rgba(255, 255, 0, 1) 100%);     
+    border-radius: 10px 10px 10px 10px;
+}
+
+.range {
+    background:linear-gradient(136deg, rgba(255, 0, 198, 1) 0%, rgba(255, 255, 0, 1) 100%); 
+    width: 56px;
+    height: 150%;
+    position:absolute;
+    transform: translate(147px,-655px);
+    border-radius: 3px;
+    z-index: 100;
+}
+
+.hole{
+    width: 65px;
+    height: 6px;
+    background: rgba(0, 0, 0, 0.874);
+    transform: translate(142px,18px);
+    border-radius: 10px;
+}
+
+.close-card {
+    color: rgba(255, 0, 198, 1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 300px;
+    cursor: pointer;
+}
+
+.image-inform img{
+    height: 30%;
+    width: 30%;
+    object-fit: cover;
+    position: relative;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    transform: translate(115px,25px);
+
+}
+
+.nomeUser {
+    color: white;
+    text-align: center;
+    transform: translate(0px, 45px);
+    font-size: 16px;
+}
+
+.btn-address{
+    width: 30%;
+    height: 30px;
+    border-radius: 4px;
+    position: fixed;
+    margin-left: -161px;
+    border: none;
+    top: 229px;
+    left: 170px;
+    background: #8080804c;
+    color: white;
+    cursor: pointer;
+}
+
+.inform-address {
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    align-items: center;
+    display: none;
+    transform: translate(20px, 130px);
+    color: rgba(255, 255, 255, 0.766); 
+}
+
+.btn-sobre{
+    width: 30%;
+    height: 30px;
+    border-radius: 4px;
+    position: fixed;
+    margin-left: -52px;
+    border: none;
+    top: 229px;
+    left: 177px;
+    background: linear-gradient(136deg, rgba(255, 0, 198, 1) 0%, rgba(255, 255, 0, 1) 100%);
+    color: white;
+    cursor: pointer;
+}
+
+.inform-sobre {
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    align-items: center;
+    display: block;
+    transform: translate(17px, 130px);
+    color: rgba(255, 255, 255, 0.766); 
+}
+
+.btn-company {
+    width: 30%;
+    height: 30px;
+    border-radius: 4px;
+    position: fixed;
+    margin-left: 57px;
+    top: 229px;
+    left: 184px;
+    border: none;
+    background-color: #8080804c;
+    color: white;
+    cursor: pointer;
+}
+
+.inform-company {
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    align-items: center;
+    display: none;
+    transform: translate(7px, 140px);
+    color: rgba(255, 255, 255, 0.766);  
+}
+
+/* section card-inform acima */
+
+.login{
+    color: white;
+    text-align: center;
+    transform: translate(0px,100px);
+    margin-bottom: 5px;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+@media screen and (max-width: 462px){
+
+    .card-cadastrar{
+        background-color:transparent;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .card-login {
+        background-color:transparent;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation-name: none;
+    }
+
+    .localizar-user{
+        background-color:transparent;
+        box-shadow: none;
+    }
+
+    .input-pesquisarUser{
+        width: 340px;
+        transform: translate(60px,155px);
+    }
+
+    .input-pesquisarUsuarios label{
+        transform: translate(60px,105px);
+    }
+
+    .pesquisarUsuarioIcon{
+        transform: translate(370px,118px);
+    }
+
+}
+
+@media screen and (max-width: 354px){
+
+    .input-cadastrar {
+        width: 240px;
+        transform: translate(100px,70px);
+    }
+
+    .cadastro-input label {
+        position: absolute;
+        transform: translate(100px,20px);
+        font-size: 14px;
+    }
+
+    .visualizar-senha{
+        position: absolute;
+        transform: translate(310px,32px);
+    }
+
+    .btn-cadastrar {
+        width: 240px;
+        transform: translate(100px,90px);
+    }
+
+    .validacao-campos {
+        font-size: 7px;
+    }
+
+    .card-login {
+        background-color:transparent;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .campo-obrigatorio-login-input {
+        font-size: 7px;
+        transform: translate(37%,-110px);
+    }
+
+    .campo-obrigatorio-login {
+        font-size: 9px;
+        transform: translate(20px, 122px);
+    }
+
+    .input-login label {
+        transform: translate(130px,70px);
+        font-size: 11px;
+    }
+
+    .visualizarSenhaLogin{
+        position: absolute;
+        transform: translate(325px,85px);
+    }
+
+    .spans {
+        position: relative;
+        top: -10px;
+    }
+    
+    .login-span-person {
+        position: relative;
+        margin-top: -120px;
+        left: -90%;
+    }
+
+    .login-span-lock{
+        transform: translate(-340px,8px);
+    }
+
+    .login-h1-cadastrar{
+        transform: translate(22px,220px);
+    }
+
+    .input-pesquisarUser {
+        width: 250px;
+        transform: translate(110px,155px);
+    }
+
+    .input-pesquisarUsuarios label{
+        transform: translate(110px,105px);
+        font-size: 13px;
+    }
+    .pesquisarUsuarioIcon {
+        position: absolute;
+        left: -35px;
+    }
+
+    .btn-pesquisaUser {
+        width: 250px;
+        transform: translate(110px,190px);
+    }
+
+    .card-inform{
+        width: 250px;
+        height: 450px;
+    }
+
+    .image-inform img{
+        height: 30%;
+        width: 30%;
+        transform: translate(85px,45px);
+    }
+
+    .hole{
+        width: 65px;
+        height: 6px;
+        transform: translate(95px,18px);
+   }
+    
+    .range {
+        transform: translate(100px,-655px);
+    
+    }
+
+    .close-card {
+        padding-left: 200px;
+    }
+
+    .btn-login-enter{
+        width: 250px;
+        height: 30px;
+        transform: translate(98px,150px);
+    }
+
+    .login-input {
+        width: 250px;
+        height: 30px;
+        transform: translate(100px,130px);
+    }
+
+    .login-span-person {
+        position: relative;
+        float: right;
+        transform: translate(-325px,82px);
+    }
+
+    .campo-obrigatorio{
+        margin-top: 140px;
+        margin-left: 100px;
+        font-size: 8px;
+    }
+
+    .btn-address{
+        width: 20%;
+        height: 30px;
+        margin-left: -150px;
+    }
+    
+    .btn-sobre{
+        width: 20%;
+        height: 30px;
+        margin-left: -75px;
+    }
+    
+    .btn-company {
+        width: 24%;
+        height: 30px;
+        margin-left: -5px;
+    } 
+
+    .inform-address {
+        transform: translate(10px, 150px);
+    }
+    
+    .inform-sobre {
+        transform: translate(10px, 150px);
+    }
+    
+    .inform-company {
+        transform: translate(3px, 150px); 
+    }
+
+}

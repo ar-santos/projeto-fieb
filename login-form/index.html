@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Login</title>
+</head>
+
+        <header>
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="../imgs/icons/SUPLEMENTOS-removebg-preview.png" alt="" id="logo">
+            </div>
+        
+        </header>
+    <body>
+        
+        <section class="card-cadastrar" id="card-cadastrar">
+            
+            <div class="h1-userCadastrando" id="h1-userCadastrando">
+                <h1>Cadastro sendo realizado...</h1>
+            </div>
+
+            <div class="validacao-campos" id="validacao-campos">
+                <h1>Por favor, preencha todos os campos corretamente.</h1>
+            </div>
+
+            <h1 class="h1-login-cadastro">Novo Usuário</h1>
+            <div class="cadastro-linha"></div>
+
+            <div class="cadastro-input">
+                <input type="search" class="input-cadastrar" id="cadastro-input-name" placeholder=""  autocomplete="off" required>
+                <label for="nome" class="name-label-cadastro" id="name-label-cadastro">Nome</label>
+            </div>
+
+            <div class="cadastro-input">
+                <input type="search" class="input-cadastrar" id="cadastro-input-usuario" placeholder=""  autocomplete="off" required>
+                <label for="usuario" class="user-label-cadastro" id="user-label-cadastro">Usuário</label>
+            </div>
+
+            <div class="cadastro-input">
+                <input type="password" class="input-cadastrar" id="cadastro-input-senha" placeholder=""  autocomplete="off" required>
+                <label for="senha" class="senha-label-cadastro" id="senha-label-cadastro">Senha</label>
+                <span class="material-symbols-outlined md-36 visualizar-senha" id="visualizar-senha">visibility</span>
+            </div>
+
+            <button class="btn-cadastrar" id="btn-cadastrar">Cadastrar</button>
+
+            <div class="btn-entrar-conta">
+                <div class="cadastro-linhaSeparadora"></div>
+                <h1 class="cadastro-h1-entrar">Já tem uma conta?</h1>
+                <button class="cadastro-btn-entrar" id="cadastro-btn-entrar">Entrar</button>
+            </div>
+
+        </section>
+
+        <section class="card-login" id="card-login">
+
+            <h1 class="h1-login-cadastro">Login</h1>
+            <div class="login-linha"></div>
+            
+            <div class="input-login">
+                <input type="search" class="login-input" id="login-input-user" placeholder=""  autocomplete="off" required>
+                <label for="usuario" class="login-label-nome" id="login-label-nome">Usuário</label>
+            </div>
+            
+            <div class="input-login">
+                <input type="password" class="login-input"  id="login-input-senha" placeholder="" autocomplete="off" required>
+                <label for="senha" class="login-label-senha" id="login-label-senha">Senha</label>
+                <span class="material-symbols-outlined md-36 visualizarSenhaLogin" id="visualizarSenhaLogin">visibility</span>
+            </div>
+
+            <div class="campo-obrigatorio-login-input" id="campo-obrigatorio-login-input">
+                <h1>Por favor, preencha todos os campos corretamente.</h1>
+            </div>
+
+            <div class="spans">
+                <span class="material-symbols-outlined login-span-person md-36" id="login-span-person">person</span>
+                <span class="material-symbols-outlined login-span-lock md-36" id="login-span-lock">lock</span>
+            </div>
+
+            <button class="btn-login-enter" id="btn-login-enter">Entrar</button>
+
+            <div class="campo-obrigatorio-login" id="campo-obrigatorio-login">
+                <h1>Usuario ou senha incorretos.</h1>
+            </div>
+
+            <div class="btn-cadastrar-conta">
+                <div class="login-linhaSeparadora"></div>
+                <h1 class="login-h1-cadastrar">Não tem uma conta?</h1>
+                <button class="login-btn-criar" id="login-btn-criar">Criar nova conta</button>
+            </div>
+
+        </section>
+
+        <section class="localizar-user" id="localizar-user">
+
+            <h1 class="h1-localizarUser">Localizar Usuário</h1>
+
+            <div class="linha-localizarUser"></div>
+
+            <div class="input-pesquisarUsuarios">
+                <input type="search" class="input-pesquisarUser" id="input-pesquisarUser" placeholder=""  autocomplete="off" required>
+                <label for="usuario" class="label-pesquisarUser">Por favor, digite o Id do usuário:</label>
+            </div>
+            
+            <span class="material-symbols-outlined md-36 pesquisarUsuarioIcon" id="pesquisarUsuarioIcon">search</span>
+            <button class="btn-pesquisaUser" id="btn-pesquisaUser">Pesquisar Usuário</button>
+
+            <div class="campo-obrigatorio" id="campo-obrigatorio">
+                <h1>Usuario ou senha incorretos.</h1>
+            </div>
+            
+        </section>
+
+        <section class="card-inform" id="card-inform">
+
+            <span class="overlay"></span>
+
+            <div class="range"></div>
+            
+            <div class="hole"></div>
+            
+            <section class="close-card" id="close-card">
+                <span class="material-symbols-outlined ocultarCard" id="ocultarCard">close</span>
+            </section>
+
+            <div class="image-inform">
+                <img class ="img-perfil" src="data:image/jpeg;base64,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">
+            </div>
+
+            <div class="nomeUser" id="nomeUser">
+                <h1></h1>
+            </div>
+
+            <section class="inform-card">   
+                
+                <div class="address">
+                    <button class="btn-address" id="btn-address">Address</button>
+                    <div class="inform-address" id="inform-address"></div>
+                </div>
+
+                <div class="sobre">
+                    <button class="btn-sobre" id="btn-sobre">Sobre</button>
+                    <div class="inform-sobre" id="inform-sobre"></div>
+                </div>
+
+                <div class="company">
+                    <button class="btn-company" id="btn-company">Company</button>
+                    <div class="inform-company" id="inform-company"></div>
+                </div>
+
+            </section>
+
+        </section>
+
+        <script type="module" src="./src/js/main.js"></script>
+    </body>
+</html>
